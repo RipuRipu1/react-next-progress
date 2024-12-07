@@ -8,11 +8,12 @@ const textContent = document.createTextNode(text);
 
 element.appendChild(textContent); // append aka place the text into the h1 element we just created
 
-app.appendChild(element); // place the h1 element we just created inside the div
+main.appendChild(element); // place the h1 element we just created inside the div
 
 // target html element
-const app = document.getElementById('react-test')
-const root = ReactDOM.createRoot(app);
+// const app = document.getElementById('react-test')
+// const root = ReactDOM.createRoot(app);
 
 // render the element
-root.render(<h1>Hello World</h1>)
+// root.render(<h1>Hello World</h1>) // the script inside this is actually JSX not Javascript
+                                     // to translate the JSX from Javascript we need compiler such as Babel
