@@ -15,16 +15,20 @@ function Header() {
 // Remember React can only render one element!
 // If you want to render many compoenents nest them inside a function
 function Homepage() {
+    function onChange() {
+        console.log("this is a function");
+    }
     return(
         <div>
             <Header title="React"/>
+            <button onClick={onChange}>Like</button>
         </div>
     )
 }
 
 // render the element
 root.render(<Homepage />) // the script inside this is actually JSX not Javascript
-                                  // to translate the JSX from Javascript we need compiler such as Babel
+                          // to translate the JSX from Javascript we need compiler such as Babel
 
 
 // props
