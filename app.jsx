@@ -17,7 +17,7 @@ function Header() {
 function Homepage() {
     return(
         <div>
-            <Header />
+            <Header title="React"/>
         </div>
     )
 }
@@ -25,3 +25,42 @@ function Homepage() {
 // render the element
 root.render(<Homepage />) // the script inside this is actually JSX not Javascript
                                   // to translate the JSX from Javascript we need compiler such as Babel
+
+
+// props
+// props = components that accept custom arguments (or props) that change the component's behavior 
+// or what is visibly shown when it's rendered to the screen.
+const src = document.getElementById('react-hero')
+const tree = ReactDOM.createRoot(src);
+
+// props as its first function parameter
+// Since props is an object, you can use object destructuring to explicitly name 
+// the values of props inside your function parameters:
+function Hero({title}) {
+
+    //To use the title prop, add curly braces {}.
+    // other things we can do with props
+    return ( <div>
+        <h1>Using a Prop in {title}</h1> 
+        <h2>{`Other cool things with ${title}`}</h2>
+        </div>
+    )
+}
+
+function Section() {
+    //Iteration
+    const foods = ['Spaghetti', 'Pizza', 'Apple'];
+
+    return(
+        <div>
+            <Hero title="React props concept"/>
+            <ul>
+                {foods.map((food_name) => (
+                    <li key={food_name}>{food_name}</li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+
+tree.render(<Section />);
