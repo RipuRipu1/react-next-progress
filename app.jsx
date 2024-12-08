@@ -7,13 +7,12 @@ const root = ReactDOM.createRoot(app);
 // To make a React Component we have to make a function that represent the Component
 
 // making components
+// let's make a new component called "Header"
 // React components should be Capitalize
 function Header() {
     return (<h1>Develop a website using React</h1>)
 }
 
-// Remember React can only render one element!
-// If you want to render many components nest them inside a function
 function Homepage() {
 
     // making event handler
@@ -34,6 +33,9 @@ function Homepage() {
     function handleClick() {
         setLikes(likes + 1);
     }
+
+    // Remember React can only render one element!
+    // If you want to render many components nest them inside a function
     return(
         <div>
             <Header title="React"/>
