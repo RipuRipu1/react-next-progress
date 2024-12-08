@@ -20,10 +20,25 @@ function Homepage() {
     function onChange() {
         console.log("this is a function");
     }
+
+    // React has a set of functions called hooks.
+    // Hooks allow you to add additional logic such as state to your components
+    // You can think of state as any information in your UI that changes over time, 
+    // usually triggered by user interaction.
+
+    //React hook used to manage state is called: useState()
+    const [likes, setLikes] = React.useState(0);
+    // The first item in the array is the state value,
+    // The second item in the array is a function to update the value. 
+
+    function handleClick() {
+        setLikes(likes + 1);
+    }
     return(
         <div>
             <Header title="React"/>
             <button onClick={onChange}>Share</button>
+            <button onClick={handleClick}>Likes ({likes})</button>
         </div>
     )
 }
