@@ -13,10 +13,10 @@ function Header() {
 }
 
 // Remember React can only render one element!
-// If you want to render many compoenents nest them inside a function
+// If you want to render many components nest them inside a function
 function Homepage() {
 
-    //making event handler
+    // making event handler
     function onChange() {
         console.log("this is a function");
     }
