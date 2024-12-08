@@ -26,7 +26,7 @@ function Homepage() {
     // You can think of state as any information in your UI that changes over time, 
     // usually triggered by user interaction.
 
-    //React hook used to manage state is called: useState()
+    // React hook used to manage state is called: useState()
     const [likes, setLikes] = React.useState(0);
     // The first item in the array is the state value,
     // The second item in the array is a function to update the value. 
